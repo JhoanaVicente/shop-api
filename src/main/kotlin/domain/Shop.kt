@@ -3,8 +3,8 @@ package domain
 import jakarta.persistence.*
 
 
-@Table(name = "shop")
 @Entity
+@Table(name = "shop")
 data class Shop(
     var name: String,
     var brand: String,
@@ -13,6 +13,7 @@ data class Shop(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    var id: Long? = null,
+    @Column(name = "id")
+    var id: Long? = null
 )
+
